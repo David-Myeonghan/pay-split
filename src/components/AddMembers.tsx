@@ -1,7 +1,12 @@
+import CenteredOverlayForm from "./CenteredOverlayForm";
+
 const AddMembers = () => {
 
     return (
-        <div>Add Members</div>
+        <div>
+            Add Members
+            <CenteredOverlayForm />
+        </div>
     )
 }
 

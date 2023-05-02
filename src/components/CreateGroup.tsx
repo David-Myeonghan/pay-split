@@ -1,7 +1,12 @@
+import CenteredOverlayForm from "./CenteredOverlayForm";
+
 const CreateGroup = () => {
 
     return (
-        <div>Create Group</div>
+        <div>
+            Create Group
+            <CenteredOverlayForm />
+        </div>
     )
 }
 
