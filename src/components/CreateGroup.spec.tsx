@@ -1,9 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from 'react';
 import CreateGroup from "./CreateGroup";
+import { RecoilRoot } from "recoil";
 
 const renderComponent = () => {
-  render(<CreateGroup />);
+  render(
+    <RecoilRoot>
+      <CreateGroup />
+    </RecoilRoot>
+  );
 
   const input = screen.getByPlaceholderText("2022 Cairns trip");
   const saveButton = screen.getByText("Save");
