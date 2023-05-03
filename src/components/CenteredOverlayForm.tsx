@@ -1,8 +1,5 @@
 const CenteredOverlayForm = () => {
-
-    return (
-    <div>CenteredOverlayForm</div>
-    );
-}
+  return <div>CenteredOverlayForm</div>;
+};
 
 export default CenteredOverlayForm;
