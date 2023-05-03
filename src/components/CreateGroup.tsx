@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const CreateGroup = () => {
     const [validated, setValidated] = useState(false);
+    const [validGroupName, setValidGroupName] = useState(false)
     const [groupName, setGroupName] = useRecoilState(groupNameState);
 
     const handleSubmit = (event: any) => {
@@ -14,9 +15,10 @@ const CreateGroup = () => {
 
         const form = event?.currentTarget;
         if (form.checkValidity()) {
-
+            setValidGroupName(true)
         } else {
             event.stopPropagation();
+            setValidGroupName(false)
         }
         setValidated(true);
 
@@ -36,11 +38,11 @@ const CreateGroup = () => {
               <Form.Control
                 type="text"
                 required
-                placeholder="2023 Cairns trip"
+                placeholder="2022 Cairns trip"
                 onChange={e  => setGroupName(e.target.value)}
               />
-              <Form.Control.Feedback type="invalid">
-                type the group name please.
+              <Form.Control.Feedback type="invalid" data-valid={validGroupName}>
+                Type group name
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
