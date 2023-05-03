@@ -7,13 +7,13 @@ import { RecoilRoot } from "recoil";
 function App() {
   return (
     <Router>
-
+      <RecoilRoot>
         <Routes>
           <Route path="" element={<CreateGroup />} />
           <Route path="/members" element={<AddMembers />} />
           <Route path="/expense" element={<ExpenseMain />} />
         </Routes>
-
+      </RecoilRoot>
     </Router>
   );
 }
